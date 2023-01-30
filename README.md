@@ -1,4 +1,4 @@
-# Anomaly detection of the Tennessee Eastman Process (TEP)
+# Anomaly detection of the Tennessee Eastman Process
 
 
 The Tennessee Eastman Process (TEP) emerges as a standard benchmark for anomaly detection in the fields of process control and process engineering. The TEP is essentially a real industrial process that was modeled computationally in 1993 by Downs and Vogel. The data recovered from this study is consistently utilised for comparing and benchmarking algorithms, especially anomaly detection algorithms. 
@@ -9,7 +9,30 @@ The TEP is comprised of 8 chemical components in total: 4 reactants, 2 products,
 ![Screenshot](TEP.png)
 
 
-Based on the   Here we will attempt to construct a machine-learning anomaly detection algorithm for the TEP based on a dataset referenced in Rieth et al. (2017).
+Here, we will attempt to construct a machine-learning anomaly detection algorithm for the TEP, based on a dataset referenced in Rieth et al. (2017).
 
+## Dataset
 
+There are over 50 different variables that record properties of the system such as the flowrates, pressures, temperatures, levels, mole fractions and compressor power outputs. Over 10 of these are manipulated variables (flowrates, valve positions and the reaction agitator speed) which the operator can control to ensure that the chemical process is operating under control. Perhaps the most cited source of TEP data is the dataset set referenced in Rieth et al. (2017). Therein, process variables are sampled every 3 minutes for 25 hours in the training dataset, and 48 hours for the testing dataset. The main reason of this dataset's popularity is that it contains both a ‘fault-free’ and ‘faulty’ datafile. The former corresponds to the values of the TEP process when under normal operation while the latter contains 20 different simulated process faults. The dataset can be downloaded [here](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1).
 
+## Model
+
+The classifier that we use in this project is the XgBoost Classifier. XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification, and ranking problems. Its exceptional performance is the main reason for choosing this model. The implementation is motivated by this [github repository](https://github.com/mrunal46/TEP-Fault-Detection).
+
+## Hyperparameter optimisation
+
+To tune the XgBoost classifier, we choose n_estimators and max depth as hyperparamters. Specifically, n_estimators is the number of gradient boosted trees, i.e., the number of boosting rounds, and max_depth denotes the maximum tree depth for base learners. For simplicity, hyperparameter optimisation is carried out via gridsearch.
+
+## Results 
+
+## References
+
+Rieth, Cory A.; Amsel, Ben D.; Tran, Randy; Cook, Maia B., 2017, "Additional Tennessee Eastman Process Simulation Data for Anomaly Detection Evaluation", https://doi.org/10.7910/DVN/6C3JR1, Harvard Dataverse, V1
+
+https://github.com/mrunal46/TEP-Fault-Detection
+
+https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/
+
+## Contact details
+
+email: lefterisvl83@gmail.com
