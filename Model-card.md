@@ -32,4 +32,5 @@ An additional requirement for the anomaly detection algorithm is interpretabilit
 
 ## Trade-offs
 
-**Outline any trade-offs of your model, such as any circumstances where the model exhibits performance issues. **
+Since we deal with output-sensitive predictions, the underlying model needs to have high recall. Thus, the main trade-off considered in the model is between high precision and the model's high recall.
+
