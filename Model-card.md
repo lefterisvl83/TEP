@@ -2,12 +2,18 @@
 
 ## Model Description
 
-The model identifies anomalies in the operation of the Tennessee Eastman Process and returns 
-*1* 
+The model monitors working conditions and identifies anomalies in the operation of the Tennessee Eastman Process. 
 
 **Input:** Describe the inputs of your model 
 
+Process variables such as flowrates, pressures, temperatures, levels, mole fractions, compressor power outputs, valve positions and the reaction agitator speed.
+
+
 **Output:** Describe the output(s) of your model
+
+The model returns an integer ranging from 0 to 20 each associated with a fault-free or faulty operation. Specifically, the output is 
+**1** zero if the processs is under nominal working operation,
+**2** a nonzero integer ranging from 1 to 20 each associated with the faul class detected.
 
 **Model Architecture:** Describe the model architecture you’ve used
 
