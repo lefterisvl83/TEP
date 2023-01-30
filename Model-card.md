@@ -17,20 +17,19 @@ The model returns an integer ranging from 0 to 20 each associated with a fault-f
 
 **Model Architecture:** 
 
-
+XgBoost classifier with n_estimators and max_depth hyperparamters.
 
 ## Performance
 
-Give a summary graph or metrics of how the model performs. Remember to include how you are measuring the performance and what data you analysed it on. 
+We use the F1 micro score as performance metric. F1 score is suitable for evaluating in parallel high precision and model's high recall. In fact, we need to trade off precision for recall, and hence, F1 score is the a good choice. Since we have a multiclass classification problem, where we need to predict among 21 different working conditions, micro F1 score is a suitable metric.
+
+**Give a summary graph or metrics of how the model performs. Remember to include how you are measuring the performance and what data you analysed it on. **
 
 ## Limitations
 
-An additional requirement for the anomaly detection algorithm is interpretability, i.e. not only being able to detect the fault, but also specifying what caused it to occur. Was it due to an incorrect flowrate set point? Or potentially a faulty valve? Thanks to this dataset, we know that the fault was caused by abnormal behaviour one of the process variables. The ability to pinpoint the offending variable is an important challenge to any anomaly detection algorithm.
+An additional requirement for the anomaly detection algorithm is interpretability, i.e. not only being able to detect the fault, but also specifying what caused it to occur. Was it due to an incorrect flowrate set point? Or potentially a faulty valve? Unfortunately, the model as configured in this project is not able to address this task. This limitation represents a challenging subject for future work.
 
-It does not show what the fault is caused from. 
-
-Outline the limitations of your model.
 
 ## Trade-offs
 
-Outline any trade-offs of your model, such as any circumstances where the model exhibits performance issues. 
+**Outline any trade-offs of your model, such as any circumstances where the model exhibits performance issues. **
