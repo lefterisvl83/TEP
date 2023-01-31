@@ -23,7 +23,9 @@ XgBoost classifier with n_estimators and max_depth hyperparamters.
 
 We use the F1 micro score as performance metric. F1 score is suitable for evaluating in parallel high precision and model's high recall. In fact, we need to trade off precision for recall, and hence, F1 score is the a good choice. Since we have a multiclass classification problem, where we need to predict among 21 different working conditions, micro F1 score is a suitable metric.
 
-**Give a summary graph or metrics of how the model performs. Remember to include how you are measuring the performance and what data you analysed it on. **
+Xgboot results in an FDR of 0.68 which is quite acceptable given the reduction of the dataset. We expect far better results if a larger sample can be admitted. Here, due to limited computing resources, only a relatively small dataset can be processed.
+
+The confusion, precision, and recall matrices can be seen in the jupyter notebook provided. 
 
 ## Limitations
 
