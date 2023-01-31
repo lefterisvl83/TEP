@@ -12,8 +12,8 @@ Process variables such as flowrates, pressures, temperatures, levels, mole fract
 **Output:** 
 
 The model returns an integer ranging from 0 to 20 each associated with a fault-free or faulty operation. Specifically, the output is 
-**1** zero if the processs is under nominal working operation,
-**2** a nonzero integer ranging from 1 to 20 each associated with the faul class detected.
+** zero if the processs is under nominal working operation,
+** a nonzero integer ranging from 1 to 20 each associated with the faul class detected.
 
 **Model Architecture:** 
 
