@@ -28,6 +28,7 @@ To tune the XgBoost classifier, we choose n_estimators and max depth as hyperpar
 ## References
 
 Source of dataset used:
+
 Rieth, Cory A.; Amsel, Ben D.; Tran, Randy; Cook, Maia B., 2017, "Additional Tennessee Eastman Process Simulation Data for Anomaly Detection Evaluation", https://doi.org/10.7910/DVN/6C3JR1, Harvard Dataverse, V1
 
 The python implementation is motivated by this [github repository](https://github.com/mrunal46/TEP-Fault-Detection).
